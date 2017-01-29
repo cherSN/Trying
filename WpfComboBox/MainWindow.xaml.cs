@@ -32,7 +32,6 @@ namespace WpfApplication1
                 name = value;
                 OnPropertyChanged("Name1");
             }
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -43,9 +42,7 @@ namespace WpfApplication1
         }
 
     }
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window //, INotifyPropertyChanged
     {
         public List<MyString> MyList { set; get; }
