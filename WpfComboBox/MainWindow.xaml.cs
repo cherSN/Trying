@@ -22,11 +22,11 @@ namespace WpfApplication1
     public class MyString : INotifyPropertyChanged
     {
         private string name;
-        public MyString() { Name1 ="No_Name"; }
+        public MyString() { Name ="No_Name"; }
 
-        public MyString(string name) { Name1 = name; }
+        public MyString(string name) { Name = name; }
 
-        public string Name1 {
+        public string Name {
             get { return name; }
             set {
                 name = value;
