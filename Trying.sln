@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCollectionViewSourse", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTest", "ClassLibraryTest\ClassLibraryTest.csproj", "{1A927B73-4B08-415C-80B1-F1ACA6715CB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGridGrouping", "WpfDataGridGrouping\WpfDataGridGrouping.csproj", "{B9FBC7F0-4620-4059-A104-8F08C5DACC75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGrouping2", "WpfDataGrouping2\WpfDataGrouping2.csproj", "{6E365847-5EC5-477A-9007-7313ADA804E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{1A927B73-4B08-415C-80B1-F1ACA6715CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A927B73-4B08-415C-80B1-F1ACA6715CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A927B73-4B08-415C-80B1-F1ACA6715CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FBC7F0-4620-4059-A104-8F08C5DACC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FBC7F0-4620-4059-A104-8F08C5DACC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FBC7F0-4620-4059-A104-8F08C5DACC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FBC7F0-4620-4059-A104-8F08C5DACC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E365847-5EC5-477A-9007-7313ADA804E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E365847-5EC5-477A-9007-7313ADA804E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E365847-5EC5-477A-9007-7313ADA804E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E365847-5EC5-477A-9007-7313ADA804E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
