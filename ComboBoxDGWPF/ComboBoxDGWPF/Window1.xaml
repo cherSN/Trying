@@ -1,6 +1,8 @@
 ﻿<Window x:Class="ComboBoxDGWPF.Window1"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="ComboBox DataGrid WPF" Height="300" Width="616"
     xmlns:staticData="clr-namespace:ComboBoxDGWPF"
     xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit">
@@ -10,9 +12,10 @@
     </Window.Resources>
     
     <Grid>
+       
         <my:DataGrid x:Name="dgData" AutoGenerateColumns="False">
             <my:DataGrid.Columns>
-                <my:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="*"/>
+                <!--<my:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="*"/>-->
                 <my:DataGridTemplateColumn Header="Status" Width="100">
                     <my:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -29,7 +32,7 @@
                     </my:DataGridTemplateColumn.CellEditingTemplate>
                     
                 </my:DataGridTemplateColumn>
-                <my:DataGridTextColumn Binding="{Binding RaisedBy}" Header="Raised By" Width="100"/>
+                <!--<my:DataGridTextColumn Binding="{Binding RaisedBy}" Header="Raised By" Width="100"/>-->
             </my:DataGrid.Columns>
         </my:DataGrid>
     </Grid>
