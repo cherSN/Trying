@@ -20,6 +20,8 @@ namespace ComboBoxWPFmy
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> statut;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +35,27 @@ namespace ComboBoxWPFmy
                 new TicketInfo{ Subject="Not able to log in to portal", Status="Open", RaisedBy="User 4"},
                 new TicketInfo{ Subject="WIFI not Working", Status="Open", RaisedBy="User 7"}
             };
+
+            Statut = new List<string>();
+            Statut.Add("Assigned1");
+            Statut.Add("Closed1");
+            Statut.Add("In Progress1");
+            Statut.Add("Open1");
+            Statut.Add("Resolved1");
             dgData.ItemsSource = ticketsList;
+        }
+
+        public List<string> Statut
+        {
+            get
+            {
+                return statut;
+            }
+
+            set
+            {
+                statut = value;
+            }
         }
     }
 
