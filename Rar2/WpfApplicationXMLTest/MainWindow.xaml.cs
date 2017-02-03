@@ -288,19 +288,6 @@ namespace Rar
 
             }
 
-            //IList<RarCompany> rac = ViewModel.CompanyList.Select(p => p).OrderBy(s=>s.Producter).ThenBy(s=> 
-            //{
-            //    int r;
-            //    try
-            //    {
-            //        r = Int32.Parse(s.ID);
-            //    }
-            //    catch (Exception)
-            //    {
-            //        return 0;
-            //    }
-            //    return r;
-            //    }).ToList();
             dataGrid2.ItemsSource = ViewModel.CompanyList; 
             //comboBoxPartner.ItemsSource = ViewModel.CompanyList;
             //dataGridF6.ItemsSource = ViewModel.TurnoverDataList;

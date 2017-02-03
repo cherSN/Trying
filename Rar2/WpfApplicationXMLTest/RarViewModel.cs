@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Rar
 {
     public class RarViewModel : INotifyPropertyChanged
