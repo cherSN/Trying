@@ -1,0 +1,36 @@
+﻿<Window x:Class="Rar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rar"
+        mc:Ignorable="d"
+        Title="MainWindow" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Language="ru-RU">
+    <Window.DataContext>
+        <local:RarViewModel/>
+    </Window.DataContext>
+    <!--<Window.Resources>
+        <local:RarViewModel x:Key="RarViewModel"/>
+    </Window.Resources>-->
+    <DockPanel>
+        <Menu x:Name="menu" Height="21" VerticalAlignment="Top" DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" HorizontalAlignment="Left" Width="145" Click="MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel  DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <!--<DataGrid x:Name="dataGridF6"  ItemsSource="{Binding TurnoverDataList}"  AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=DocumentNumber}" Header="№ Док"  MinWidth="60"/>
+                </DataGrid.Columns>
+            </DataGrid>-->
+            <DataGrid x:Name="dataGridCompanies1"  AutoGenerateColumns="False" ItemsSource="{Binding CompanyList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}"  Header="ИД" Width="40"/>
+                    <DataGridTextColumn Binding="{Binding Name}"  Header="Наименование" Width="300"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid x:Name="dataGrid2" />
+        </StackPanel>
+    </DockPanel>
+</Window>
