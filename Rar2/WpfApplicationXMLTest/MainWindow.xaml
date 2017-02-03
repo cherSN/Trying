@@ -28,7 +28,7 @@
             </DataGrid>-->
             <DataGrid x:Name="dataGridCompanies1"  AutoGenerateColumns="False" ItemsSource="{Binding CompanyList}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding ID}"  Header="ИД" Width="40"/>
+                    <DataGridTextColumn x:Name="colId" Binding="{Binding ID}"  Header="ИД" Width="40"/>
                     <DataGridTextColumn Binding="{Binding Name}"  Header="Наименование" Width="300"/>
                 </DataGrid.Columns>
             </DataGrid>
