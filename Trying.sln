@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfComboBox", "WpfComboBox\WpfComboBox.csproj", "{492995EC-21E7-4871-82F0-B4ED12291700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxDGWPF", "ComboBoxDGWPF\ComboBoxDGWPF\ComboBoxDGWPF.csproj", "{696992A6-E331-46E5-84F9-AE449C6C5E3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxWPFmy", "ComboBoxWPFmy\ComboBoxWPFmy.csproj", "{C588E6CC-1EEF-4EF6-91F5-BCD57B602228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{492995EC-21E7-4871-82F0-B4ED12291700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{492995EC-21E7-4871-82F0-B4ED12291700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{492995EC-21E7-4871-82F0-B4ED12291700}.Release|Any CPU.Build.0 = Release|Any CPU
-		{696992A6-E331-46E5-84F9-AE449C6C5E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{696992A6-E331-46E5-84F9-AE449C6C5E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{696992A6-E331-46E5-84F9-AE449C6C5E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{696992A6-E331-46E5-84F9-AE449C6C5E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C588E6CC-1EEF-4EF6-91F5-BCD57B602228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C588E6CC-1EEF-4EF6-91F5-BCD57B602228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C588E6CC-1EEF-4EF6-91F5-BCD57B602228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C588E6CC-1EEF-4EF6-91F5-BCD57B602228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
