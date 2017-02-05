@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGrid", "WpfDataGrid\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRar", "Rar2\WpfApplicationXMLTest\WpfRar.csproj", "{47D80BE2-A902-4E70-8180-FDB220F1EEC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{4AA81C23-47F8-483D-A4F8-B6BC6FC0E9C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataTemplate", "WpfDataTemplate\WpfDataTemplate.csproj", "{12923BF2-A110-4436-8D56-246D877316E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{47D80BE2-A902-4E70-8180-FDB220F1EEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47D80BE2-A902-4E70-8180-FDB220F1EEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47D80BE2-A902-4E70-8180-FDB220F1EEC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA81C23-47F8-483D-A4F8-B6BC6FC0E9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA81C23-47F8-483D-A4F8-B6BC6FC0E9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA81C23-47F8-483D-A4F8-B6BC6FC0E9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA81C23-47F8-483D-A4F8-B6BC6FC0E9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12923BF2-A110-4436-8D56-246D877316E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12923BF2-A110-4436-8D56-246D877316E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12923BF2-A110-4436-8D56-246D877316E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12923BF2-A110-4436-8D56-246D877316E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

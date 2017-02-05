@@ -5,12 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDataGrid"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Window.DataContext>
-        <local:DataView/>
-    </Window.DataContext>
+        Title="MainWindow" Height="350" Width="525" Language="Ru-ru" DataContext="{DynamicResource DataView1}">
+
+    <Window.Resources>
+        <local:DataView x:Key="DataView1"/>
+
+        <Style x:Key="OneClickEditDateGridColumn">
+            <!--<Setter Property="Control.FontFamily" Value="Calibri"></Setter>
+            <Setter Property="Control.FontSize" Value="18"></Setter>
+            <Setter Property="Control.FontWeight" Value="Bold"></Setter>-->
+            <Setter Property="Control.Padding" Value="0"></Setter>
+            <!--<Setter Property="Control.Margin" Value="5"></Setter>
+            <Setter Property="TextBlock.TextAlignment" Value="Right" />-->
+        </Style>
+    </Window.Resources>
     <Grid>
-        <DataGrid x:Name="dataGrid" Margin="10,0,0,0" ItemsSource="{Binding TicketsList}"/>
+        <Button Content="Button"  VerticalAlignment="Top" Height="21" Click="button_Click" Width="108" HorizontalAlignment="Left"/>
+        <TextBox  HorizontalAlignment="Left" Height="21" Margin="173,0,0,0"  Text="{Binding RowCount}" VerticalAlignment="Top" Width="120"/>
+
+
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" ItemsSource="{Binding TicketsList}" SelectedCellsChanged="dataGrid_SelectedCellsChanged" SelectionUnit="Cell" Margin="0,24,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Status}" ClipboardContentBinding="{x:Null}" Header="Status"/>
+                <DataGridTextColumn Binding="{Binding Subject}" ClipboardContentBinding="{x:Null}" Header="Subject"/>
+                <DataGridTextColumn Binding="{Binding RaisedBy}" ClipboardContentBinding="{x:Null}" Header="RaisedBy"/>
+
+                <DataGridTemplateColumn x:Name="myCol1" Header="Date 1 click" CellStyle="{StaticResource OneClickEditDateGridColumn}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding TicketDate, StringFormat=\{0:d\}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>                    
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <Grid x:Name="grd" FocusManager.FocusedElement="{Binding ElementName= myDatePicker}">
+                            <DatePicker SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+                
+                
+                
+                <DataGridTemplateColumn x:Name="myCol" Header="Date 2 click" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock x:Name="myDataTemplate" Text="{Binding TicketDate, StringFormat=\{0:d\}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker x:Name="myDatePicker" SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
+
 
     </Grid>
 </Window>
