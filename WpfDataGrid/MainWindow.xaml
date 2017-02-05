@@ -39,7 +39,10 @@
                     <DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
                             <Grid x:Name="grd" FocusManager.FocusedElement="{Binding ElementName= myDatePicker}">
-                            <DatePicker SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+                                <StackPanel>
+                                <DatePicker x:Name="myDatePicker0" SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+                                <DatePicker x:Name="myDatePicker1" SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+                                </StackPanel>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellEditingTemplate>

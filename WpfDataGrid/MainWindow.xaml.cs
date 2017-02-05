@@ -32,13 +32,16 @@ namespace WpfDataGrid
         }
 
         private childItem FindVisualChild<childItem>(DependencyObject obj)
-    where childItem : DependencyObject
+                   where childItem : DependencyObject
         {
             for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
             {
                 DependencyObject child = VisualTreeHelper.GetChild(obj, i);
+
                 if (child != null && child is childItem)
+                {
                     return (childItem)child;
+                }
                 else
                 {
                     childItem childOfChild = FindVisualChild<childItem>(child);
@@ -51,7 +54,7 @@ namespace WpfDataGrid
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            DataGridTemplateColumn tcol = myCol;
+            DataGridTemplateColumn tcol = myCol1;
 
  
               DataGridRow myRow=  (DataGridRow)(dataGrid.ItemContainerGenerator.ContainerFromItem(dataGrid.Items.CurrentItem));
@@ -63,8 +66,8 @@ namespace WpfDataGrid
 
             DependencyObject fe = (DependencyObject)myDataTemplate.LoadContent();
             //TextBlock myTextBlock = (TextBlock)myDataTemplate.FindName("myDataTemplate", myContentPresenter);
-
-
+            string typeobj = fe.DependencyObjectType.Name;
+           DatePicker dpp = FindVisualChild<DatePicker>(fe);
             MessageBox.Show("Setting");
         }
 
