@@ -41,7 +41,6 @@
                             <Grid x:Name="grd" FocusManager.FocusedElement="{Binding ElementName= myDatePicker}">
                                 <StackPanel>
                                 <DatePicker x:Name="myDatePicker0" SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
-                                <DatePicker x:Name="myDatePicker1" SelectedDate="{Binding TicketDate, Mode=TwoWay,  ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>

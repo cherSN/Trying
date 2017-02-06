@@ -63,23 +63,60 @@ namespace WpfDataGrid
             // Finding textBlock from the DataTemplate that is set on that ContentPresenter
             //DataTemplate myDataTemplate = myContentPresenter.ContentTemplate;
             DataTemplate myDataTemplate = tcol.CellEditingTemplate;
-
             DependencyObject fe = (DependencyObject)myDataTemplate.LoadContent();
+
             //TextBlock myTextBlock = (TextBlock)myDataTemplate.FindName("myDataTemplate", myContentPresenter);
             string typeobj = fe.DependencyObjectType.Name;
            DatePicker dpp = FindVisualChild<DatePicker>(fe);
+
+
+            bool res = IsDatePickerUsed(fe);
+
+
             MessageBox.Show("Setting");
         }
+
+        private bool IsDatePickerUsed(DependencyObject obj)
+        {
+
+            if(obj.DependencyObjectType.Name.Equals("DatePicker")) {
+                return true;
+            }
+            else
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(obj, i);
+                    return IsDatePickerUsed(child);
+                }
+
+
+            }
+            return false;
+        }
+
+        
 
         private void dataGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             if (e.AddedCells.Count == 0) return;
             var cellInfo = e.AddedCells[0];
-            if (cellInfo.Column ==
-              dataGrid.Columns[3])
+            //if (cellInfo.Column ==
+            //  dataGrid.Columns[3])
+            //{
+            //    dataGrid.BeginEdit();
+            //}
+
+            DataGridTemplateColumn column = (DataGridTemplateColumn)cellInfo.Column;
+            DataTemplate myDataTemplate = column.CellEditingTemplate;
+            DependencyObject obj = (DependencyObject)myDataTemplate.LoadContent();
+            if (IsDatePickerUsed(obj))
             {
                 dataGrid.BeginEdit();
             }
+
+            //
+
 
             //string header = (string)cellInfo.Column.Header;
 
@@ -106,7 +143,7 @@ namespace WpfDataGrid
 
             //            DataRowView dataRow = (DataRowView)dataGrid.SelectedItem;
             //cellInfo.Column.GetType().GetProperty("CellEditingTemplate")
-            System.Windows.LocalValueEnumerator lp = cellInfo.Column.GetLocalValueEnumerator();
+            //System.Windows.LocalValueEnumerator lp = cellInfo.Column.GetLocalValueEnumerator();
             //while (lp.MoveNext())
             //{
             //    DependencyProperty dp = lp.Current.Property;
