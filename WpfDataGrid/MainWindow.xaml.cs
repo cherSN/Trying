@@ -107,13 +107,18 @@ namespace WpfDataGrid
             //    dataGrid.BeginEdit();
             //}
 
-            DataGridTemplateColumn column = (DataGridTemplateColumn)cellInfo.Column;
-            DataTemplate myDataTemplate = column.CellEditingTemplate;
-            DependencyObject obj = (DependencyObject)myDataTemplate.LoadContent();
-            if (IsDatePickerUsed(obj))
+            if (cellInfo.Column.GetType().Equals(typeof(DataGridTemplateColumn)))
             {
-                dataGrid.BeginEdit();
-            }
+                DataGridTemplateColumn column = (DataGridTemplateColumn)cellInfo.Column;
+                DataTemplate myDataTemplate = column.CellEditingTemplate;
+                DependencyObject obj = (DependencyObject)myDataTemplate.LoadContent();
+                if (IsDatePickerUsed(obj))
+                {
+                    dataGrid.BeginEdit();
+                }
+            } 
+
+
 
             //
 
