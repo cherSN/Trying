@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataTemplate", "WpfDataTemplate\WpfDataTemplate.csproj", "{12923BF2-A110-4436-8D56-246D877316E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMultiValueConverter", "WpfApplication2\IMultiValueConverter.csproj", "{0EE56EBF-C09E-4C0C-A541-DAB939A3A665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectDataProvider", "ObjectDataProvider\ObjectDataProvider.csproj", "{D4F342C6-B530-492A-BCCF-9AFF66A18F17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{12923BF2-A110-4436-8D56-246D877316E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12923BF2-A110-4436-8D56-246D877316E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12923BF2-A110-4436-8D56-246D877316E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE56EBF-C09E-4C0C-A541-DAB939A3A665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE56EBF-C09E-4C0C-A541-DAB939A3A665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE56EBF-C09E-4C0C-A541-DAB939A3A665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE56EBF-C09E-4C0C-A541-DAB939A3A665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
