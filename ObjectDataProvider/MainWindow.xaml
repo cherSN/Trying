@@ -11,7 +11,7 @@
         <ObjectDataProvider x:Key="myDomainObjectMethod" ObjectType="{x:Type local:DomainObject}" MethodName="ConvertQuarterAndBalanceToColor">
         <ObjectDataProvider.MethodParameters>
             <system:String>April</system:String>
-            <system:Decimal>-150.00</system:Decimal>
+                <system:Decimal>150.00</system:Decimal>
         </ObjectDataProvider.MethodParameters>
     </ObjectDataProvider>
     <!--<local:BalanceQuarterColorConverter x:Key="myBalanceQuarterColorConverter" />-->
