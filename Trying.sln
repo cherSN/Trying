@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMultiValueConverter", "Wpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectDataProvider", "ObjectDataProvider\ObjectDataProvider.csproj", "{D4F342C6-B530-492A-BCCF-9AFF66A18F17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfComanding1", "WpfComanding\WpfComanding1.csproj", "{E6FCDFE4-9A92-4B18-BBBB-7DC0CEE316E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfComanding2", "WpfComanding2\WpfComanding2.csproj", "{BC6B21B3-1751-4895-BBAE-DABC23134E62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4F342C6-B530-492A-BCCF-9AFF66A18F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6FCDFE4-9A92-4B18-BBBB-7DC0CEE316E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6FCDFE4-9A92-4B18-BBBB-7DC0CEE316E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6FCDFE4-9A92-4B18-BBBB-7DC0CEE316E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6FCDFE4-9A92-4B18-BBBB-7DC0CEE316E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6B21B3-1751-4895-BBAE-DABC23134E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6B21B3-1751-4895-BBAE-DABC23134E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6B21B3-1751-4895-BBAE-DABC23134E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6B21B3-1751-4895-BBAE-DABC23134E62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
