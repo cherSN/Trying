@@ -24,5 +24,17 @@ namespace WpfComanding
         {
             InitializeComponent();
         }
+
+        public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Executing the Open command");
+        }
+
+        public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true; // CanOpenIsChecked;
+        }
     }
+
+
 }

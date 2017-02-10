@@ -9,13 +9,16 @@
     <!--<Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewCommand_Executed"></CommandBinding>
     </Window.CommandBindings>-->
-    
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
+    </Window.CommandBindings>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Edit">
                 <MenuItem Command="ApplicationCommands.Cut"/>
                 <MenuItem Command="ApplicationCommands.Copy"/>
                 <MenuItem Command="ApplicationCommands.Paste"/>
+                <MenuItem Command="ApplicationCommands.Open"/>
             </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Top" FontFamily="Wingdings" FontSize="16px">
