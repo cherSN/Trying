@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfComanding
+namespace WpfCollectionViewSourse
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,18 +23,22 @@ namespace WpfComanding
         public MainWindow()
         {
             InitializeComponent();
+            List<string> lstSource = new List<string>() { "1", "2", "3" };
+            viewSource = new CollectionViewSource();
+            viewSource.Source = lstSource;
+            viewSource.Filter += viewSource_Filter;
+            lst.ItemsSource = viewSource.View;
         }
 
-        public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
+        CollectionViewSource viewSource;
+        void viewSource_Filter(object sender, FilterEventArgs e)
         {
-            MessageBox.Show("Executing the Open command");
+            e.Accepted = ((string)e.Item).IndexOf(filter.Text) >= 0;
         }
 
-        public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
+        private void filter_TextChanged(object sender, TextChangedEventArgs e)
         {
-            e.CanExecute = true; // CanOpenIsChecked;
+            viewSource.View.Refresh();
         }
     }
-
-
 }
